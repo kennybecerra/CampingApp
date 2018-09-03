@@ -1,0 +1,25 @@
+$color-orange: #f98a09;
+$grey: #444;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background: $grey;
+
+    & img {
+        border-radius: 100%;
+        border: 3px solid red;
+    }
+
+    & h1 {
+        color: white;
+        font-family: sans-serif;
+        font-size: 3rem;
+        text-shadow:  0 0 20px black;
+        padding: 2px;
+    }
+}
