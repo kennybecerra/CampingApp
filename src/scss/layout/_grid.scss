@@ -2,7 +2,7 @@
 
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
-  grid-template-rows: [header-start] 95vh [header-end] repeat(5, [section-start] 100vh [section-end]) [footer-start] min-content [footer-end];
+  grid-template-rows: [header-start] 95vh [header-end] repeat(5, [section-start] min-content [section-end]) [footer-start] min-content [footer-end];
 
 }
 
@@ -20,19 +20,6 @@
   grid-column: col-start 1 / col-end 12;
   grid-row: section-start 2 / section-end 2;
 
-  padding: 20rem 0;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba($color-primary-light,.8),
-    rgba($color-primary-dark,.8)),
-    url(../images/nat-4.jpg);
-  background-size: cover;
-  transform: skewY(-7deg);
-  margin-top: -10rem;
-
-  & > * {
-    transform: skewY(7deg);
-  }
 }
 
 .tours {

@@ -1,24 +1,23 @@
 .about {
 
     display: grid;
-    grid-template-columns: [col-start] 1fr [col-mid] 1fr [col-end];
-    grid-template-rows: [heading-start] 10% [heading-end body-start] 90% [body-end];
+    grid-template-columns: [col-start] 50% [col-mid] 50% [col-end];
+    grid-template-rows: [heading-start] 15% [heading-end body-start] 85% [body-end];
 
     justify-items: center;
     align-items: center;
 
-
-
-    background-color: $color-grey-light-1;
-    padding: 25rem 0;
-    margin-top: -20vh;
+    //background-color: $color-grey-light-1;
+    padding: 5rem;
+    grid-gap: 2rem;
+    //margin-top: -20vh;
 
     &__heading {
 
         align-self: center;
         justify-self: center;
 
-        margin: 7rem;
+        margin: 5rem 0;
 
         grid-column: col-start / col-end;
         grid-row: heading-start / heading-end;
@@ -48,6 +47,8 @@
 
         grid-column: col-start / col-mid;
         grid-row: body-start / body-end;
+
+        padding: 2rem;
     }
 
     &__composition {
@@ -55,9 +56,50 @@
         grid-column: col-mid / col-end;
         grid-row: body-start / body-end;
 
-        height:80%;
+        height: 70%;
         width: 100%;
 
     }
 
 }
+
+.composition {
+    position: relative;
+  
+    &__photo {
+      width: 55%;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+      border-radius: 2px;
+      position: absolute;
+      z-index: 10;
+      transition: all .2s;
+      outline-offset: 2rem;
+  
+      &--p1 {
+        left: 0;
+        top: -2rem;
+      }
+  
+      &--p2 {
+        right: 0;
+        top: 2rem;
+      }
+  
+      &--p3 {
+        left: 20%;
+        top: 10rem;
+      }
+  
+      &:hover {
+        outline: 1.5rem solid $color-primary;
+        transform: scale(1.05) translateY(-.5rem);
+        box-shadow:  0 2.5rem 4rem rgba($color-black, .5);
+        z-index: 20;
+      }
+  
+    }
+  
+    &:hover &__photo:not(:hover) {
+      transform: scale(.95);
+    }
+  }
