@@ -6,7 +6,7 @@ The web application uses **HTML5** syntax along with **CSS Grid/Flexbox** for la
 
 ## Folder Structure
 
-There are 3 main folders; `dist` folder contains production ready files, `src` folder contains the files I used in development, `config` containes webpack configuration files. In order to use github pages I have copied all `dist` files into root directory as well. Feel free to browser my `src` folder to see unminified code.
+There are 3 main folders: `dist` folder contains production ready files, `src` folder contains the files I used in development, and `config` containes webpack configuration files. In order to use github pages I have copied all `dist` files into root directory as well. Feel free to browse the `src` folder to see non-minified code.
 
 - config 
   - webpack.dev.js 
