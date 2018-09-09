@@ -1,6 +1,6 @@
 .features {
 
-    padding: 20rem 0;
+    padding: 15vw 0;
     background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light,.8),
@@ -8,7 +8,6 @@
       url(../images/nat-4.jpg);
     background-size: cover;
     transform: skewY(-7deg);
-    margin-top: 10rem;
 
     display: grid;
     grid-template-columns: minmax(min-content, 1200px);
@@ -22,24 +21,30 @@
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 2rem;
-        margin: 0 2rem;
+        grid-gap: 4vw;
+        margin: 0 4vw;
 
         max-width: 1200px;
         justify-content: center;
         justify-items: center;
+
+        @include ResponsiveMobileFirst(big-desktop) {
+          grid-gap: 3rem;
+          margin: 0px 0px;
+        }
     }
 }
 
 .feature-box {
 
     background-color: rgba($color-white, .8);
-    font-size: 1.5rem;
-    padding: 2.5rem;
+    font-size: 1.2vw;
+    padding: 1.5vw;
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     transition: transform .3s;
+
   
     &__icon {
       font-size: 6rem;
@@ -55,11 +60,6 @@
       transform: translateY(-1.5rem) scale(1.03);
     }
   
-    &__heading {
-        font-size: $default-font-size;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 1.5rem;
-    }
+
   }
   

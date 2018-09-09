@@ -1,66 +1,45 @@
 .about {
 
-    display: grid;
-    grid-template-columns: [col-start] 50% [col-mid] 50% [col-end];
-    grid-template-rows: [heading-start] 15% [heading-end body-start] 85% [body-end];
+  justify-self: center;
 
-    justify-items: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: [col-start] 50% [col-mid] 50% [col-end];
+  grid-template-rows: [heading-start] 15% [heading-end body-start] 85% [body-end];
+  
+  max-width: 1200px;
+  margin: 0 4rem;
+  justify-content: center;
+  padding-bottom: 10vw;
+ 
+  @include ResponsiveMobileFirst(tablet) {
+    padding-bottom: 15vw;
+   }
 
-    //background-color: $color-grey-light-1;
-    padding: 5rem;
-    grid-gap: 2rem;
-    //margin-top: -20vh;
 
-    &__heading {
+  &__textbox {
 
-        align-self: center;
-        justify-self: center;
+    grid-column: col-start / col-mid;
+    grid-row: body-start / body-end;
 
-        margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
-        grid-column: col-start / col-end;
-        grid-row: heading-start / heading-end;
+    padding: 0px 1rem;
+    padding-right:2rem;
+  }
 
-        font-size: 3.5rem; 
-        text-transform: uppercase;
-        font-weight: 700;
-      
-        transition: all .2s;  display: inline-block;
-        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        letter-spacing: .2rem;
-      
-        &:hover {
-          transform: skewY(2deg) skewX(15deg) scale(1.1);
-          text-shadow: .5rem 1rem 2rem rgba($color-black,.2);
-        }
-      
-    }
+  &__composition {
 
-    &__textbox {
+    align-self: center;
 
-        align-self: center;
-        justify-self: center;
+    grid-column: col-mid / col-end;
+    grid-row: body-start / body-end;
 
-        grid-column: col-start / col-mid;
-        grid-row: body-start / body-end;
-
-        padding: 2rem;
-    }
-
-    &__composition {
-
-        grid-column: col-mid / col-end;
-        grid-row: body-start / body-end;
-
-        height: 70%;
-        width: 100%;
-
-    }
-
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .composition {
@@ -77,17 +56,17 @@
   
       &--p1 {
         left: 0;
-        top: -2rem;
+        top: -1vw;
       }
   
       &--p2 {
         right: 0;
-        top: 2rem;
+        top: 2vw;
       }
   
       &--p3 {
         left: 20%;
-        top: 10rem;
+        top: 10vw;
       }
   
       &:hover {

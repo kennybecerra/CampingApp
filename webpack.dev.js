@@ -59,6 +59,18 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(mp4|webm|mov)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            //limit: 10,
+                            name: "./videos/[name].[ext]"
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(html)$/,
                 use: {
                   loader: 'html-loader'
