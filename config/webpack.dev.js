@@ -5,13 +5,13 @@ const path = require('path');
 module.exports = {
     entry: './src/js/index.js',
     output: {
-        filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
+        filename: './js/main.js',
+        path: path.resolve(__dirname, '../dist')
     },
     mode: "development",
-    devtool: 'inline-source-map',
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
-        contentBase: "./dist",
+        contentBase: "../dist",
         overlay: true
     },
     module: {
@@ -41,7 +41,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: "./images/[name].[ext]"
+                            name: "./assets/images/[name].[ext]"
                         }
                     }
                 ]
@@ -53,7 +53,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             //limit: 10,
-                            name: "./images/SVG/[name].[ext]"
+                            name: "./assets/SVG/[name].[ext]"
                         }
                     }
                 ]
@@ -65,7 +65,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             //limit: 10,
-                            name: "./videos/[name].[ext]"
+                            name: "./assets/videos/[name].[ext]"
                         }
                     }
                 ]
@@ -73,7 +73,10 @@ module.exports = {
             {
                 test: /\.(html)$/,
                 use: {
-                  loader: 'html-loader'
+                    loader: 'html-loader',
+                    options: {
+                        attrs: ['img:src', 'source:src']
+                    }
                 }
             },
             {
@@ -83,7 +86,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             //limit: 10,
-                            name: "./fonts/[name].[ext]"
+                            name: "./assets/fonts/[name].[ext]"
                         }
                     }
                 ]

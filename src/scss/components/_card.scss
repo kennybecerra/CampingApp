@@ -66,13 +66,13 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     &--1 {
-      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../images/nat-5.jpg)
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../assets/images/nat-5.jpg)
     }
     &--2 {
-      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../images/nat-6.jpg)
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../assets/images/nat-6.jpg)
     }
     &--3 {
-      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../images/nat-7.jpg)
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../assets/images/nat-7.jpg)
     }
   }
 

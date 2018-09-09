@@ -3,9 +3,9 @@ import style from "../scss/main.scss";
 //import {myFunc} from "./test.js";
 
 function requireAll(r) { r.keys().forEach(r); } 
-//requireAll(require.context('../images/SVG/', true, /\.svg$/));
-//requireAll(require.context('../images/', true,  /\.(png|jpeg|jpg)$/));
-//requireAll(require.context('../images/', true,  /\.(mp4|webm|mov)$/));
+//requireAll(require.context('../assets/SVG/', true, /\.svg$/));
+//requireAll(require.context('../assets/images/', true,  /\.(png|jpeg|jpg)$/));
+//requireAll(require.context('../assets/images/', true,  /\.(mp4|webm|mov)$/));
 
 let a = "hello";
 

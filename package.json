@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config=webpack.dev.js --open",
-    "dev": "webpack --config=webpack.dev.js --mode development",
-    "prod": "webpack --config=webpack.prod.js --mode production"
+    "start": "webpack-dev-server --config=config/webpack.dev.js --open",
+    "dev": "webpack --config=config/webpack.dev.js --mode development",
+    "prod": "webpack --config=config/webpack.prod.js --mode production"
   },
   "browserslist": [
     "last 5 versions"
