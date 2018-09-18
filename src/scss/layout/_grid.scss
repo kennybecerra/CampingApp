@@ -2,7 +2,7 @@
 
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
-  grid-template-rows: [header-start] 95vh [header-end] repeat(5, [section-start] min-content [section-end]) [footer-start] min-content [footer-end];
+  grid-template-rows: [header-start] min-content [header-end] repeat(5, [section-start] min-content [section-end]) [footer-start] min-content [footer-end];
 
 }
 

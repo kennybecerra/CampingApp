@@ -4,7 +4,7 @@
     grid-template-rows: [heading-start] 10% [heading-end] repeat(3, [row-start] min-content [row-end]);
     grid-template-columns:  [col-start] 1fr [col-end];
 
-    grid-gap: 7rem;
+    grid-gap: 5vw;
 }
 
 .bg-video {

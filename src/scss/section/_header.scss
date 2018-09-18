@@ -1,7 +1,7 @@
 .header {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows:  [body-start] 75vh [body-end] 1fr;
+    grid-template-rows:  [body-start] 45vh [body-end] 15vh;
 
     justify-items: center;
     align-items: center;
@@ -13,7 +13,17 @@
       url(../assets/images/hero.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+    clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 60vh );
+
+    @include ResponsiveMobileFirst(phone) {
+        grid-template-rows:  [body-start] 55vh [body-end] 20vh;
+        clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 75vh );
+    }
+
+    @include ResponsiveMobileFirst(tablet) {
+        grid-template-rows:  [body-start] 75vh [body-end] 25vh;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+    }
 
 
     &__textbox {
@@ -31,7 +41,7 @@
             color:$color-white;
             text-transform: uppercase;
             backface-visibility: hidden;
-            font-size: 6vw;
+            font-size: 5.5vw;
             font-weight: 400;
             letter-spacing: 2vw;
             
@@ -39,8 +49,10 @@
             animation-duration: 2s;
             animation-timing-function: ease-out;
             
-
-            
+            @include ResponsiveMobileFirst(phone) {
+                font-size: 6vw;
+                letter-spacing: 2vw;
+            }
             @include ResponsiveMobileFirst(big-desktop) {
                 font-size: 4.5vw;
                 letter-spacing: 1.5vw;
@@ -54,15 +66,20 @@
             text-transform: uppercase;
             backface-visibility: hidden;
             display: block;
-            font-size: 2vw;
+            font-size: 1.82vw;
             font-weight: 700;
             letter-spacing: 1.1vw;
-            padding-right: 1.1vw;
+            padding-right: 1vw;
             animation-name: moveInRight;
             animation-duration: 2s;
             animation-timing-function: ease-out;
             
 
+            @include ResponsiveMobileFirst(phone) {
+                font-size: 2vw;
+                letter-spacing: 1.1vw;
+                padding-right: 1.1vw;
+            }
             @include ResponsiveMobileFirst(big-desktop) {
                 font-size: 1.5vw;
                 letter-spacing: .85vw;
